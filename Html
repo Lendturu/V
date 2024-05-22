@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spam Input</title>
+<style>
+  /* Definisikan warna teks yang diinginkan */
+  .spam-text {
+    color: brightpurple; /* Anda dapat mengganti brightpurple dengan nilai warna CSS yang lain */
+  }
+</style>
+<script>
+  function spamText() {
+    var inputText = document.getElementById('inputText').value;
+    setInterval(function() {
+      var element = document.createElement('p');
+      element.textContent = inputText;
+      element.classList.add('spam-text'); // Tambahkan kelas untuk menerapkan gaya CSS
+      document.body.appendChild(element);
+    }, 100); // Ubah angka ini sesuai keinginan untuk mengatur kecepatan spam
+  }
+</script>
+</head>
+<body>
+  <input type="text" id="inputText" placeholder="Teks yang ingin di-spam">
+  <button onclick="spamText()">Spam!</button>
+</body>
+</html>
